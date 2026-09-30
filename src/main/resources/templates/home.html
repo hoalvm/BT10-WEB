@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{layouts/layout :: head('Tổng quan')}"></head>
+
+<body>
+    <div th:replace="~{layouts/layout :: page(~{::main})}">
+        <main class="page-container">
+            <div class="page-header">
+                <h1 class="page-title">Tổng quan</h1>
+                <p class="page-subtitle">Thống kê hệ thống</p>
+            </div>
+
+            <div th:if="${success}" class="alert alert-success" th:text="${success}"></div>
+
+            <div class="cards-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Tổng người dùng</div>
+                    <div class="stat-value" th:text="${userCount}">0</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">Tổng sản phẩm</div>
+                    <div class="stat-value" th:text="${productCount}">0</div>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <a class="button" th:href="@{/products}">Quản lý sản phẩm</a>
+                <a class="button secondary" sec:authorize="hasRole('ADMIN')" th:href="@{/users}">Quản lý người dùng</a>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

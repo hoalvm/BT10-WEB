@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{layouts/layout :: head('Hồ sơ')}"></head>
+
+<body class="auth-body">
+
+    <div class="auth-container">
+        <div class="auth-card">
+
+            <!-- Header -->
+            <div class="auth-header">
+                <div class="profile-avatar-wrapper">
+                    <img id="profile-avatar" src="" alt="Avatar" class="profile-avatar" style="display: none;">
+                    <div class="profile-avatar-placeholder" id="profile-avatar-placeholder">
+                        <span id="profile-initial">–</span>
+                    </div>
+                </div>
+                <h1 class="auth-title" id="profile-name">Đang tải...</h1>
+                <p class="auth-subtitle" id="profile-username"></p>
+            </div>
+
+            <!-- Info rows -->
+            <div class="profile-info">
+                <div class="profile-row">
+                    <span class="profile-label">Email</span>
+                    <span class="profile-value" id="profile-email">—</span>
+                </div>
+                <div class="profile-row">
+                    <span class="profile-label">Vai trò</span>
+                    <span class="profile-value" id="profile-role">—</span>
+                </div>
+                <div class="profile-row">
+                    <span class="profile-label">Xác thực</span>
+                    <span class="profile-value">
+                        <span class="status-tag active">JWT Bearer</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="profile-actions">
+                <a href="/" class="button secondary">← Trang chủ</a>
+                <button id="btn-logout-api" class="button danger">Đăng xuất</button>
+            </div>
+
+            <!-- Footer -->
+            <div class="auth-footer">
+                <span>&copy; 2026 <strong>Lý Võ Mỹ Hoa</strong>. All rights reserved.</span>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script th:src="@{/js/auth.js}"></script>
+
+</body>
+</html>
