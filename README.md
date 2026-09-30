@@ -26,6 +26,10 @@ Triển khai **JSON Web Token (JWT)** trên Spring Boot 4 – Security 7, sử d
 
 ![Profile JWT](docs/profile-jwt.png)
 
+### Local Storage
+
+![Local Storage](docs/local-storage.png)
+
 ### Dashboard
 
 ![Dashboard](docs/dashboard.png)
@@ -37,7 +41,3 @@ Triển khai **JSON Web Token (JWT)** trên Spring Boot 4 – Security 7, sử d
 ### User Management
 
 ![User Management](docs/users.png)
-
-### Local Storage
-
-![Local Storage](docs/local-storage.png)
